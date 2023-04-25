@@ -4,6 +4,7 @@ import com.codeborne.selenide.Configuration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+@SuppressWarnings("all")
 public class TestSelenideConfigLogger {
 
     Logger logger =  LoggerFactory.getLogger(TestSelenideConfigLogger.class);
@@ -12,24 +13,29 @@ public class TestSelenideConfigLogger {
         return new TestSelenideConfigLogger();
     }
 
-    public void logBrowserName(){
+    public TestSelenideConfigLogger logBrowserName(){
         logger.info("Selenide browser name: " + Configuration.browser);
+        return this;
     }
 
-    public void logBrowserSize(){
+    public TestSelenideConfigLogger logBrowserSize(){
         logger.info("Selenide browser size: " + Configuration.browserSize);
+        return this;
     }
 
-    public void logBrowserVersion(){
+    public TestSelenideConfigLogger logBrowserVersion(){
         logger.info("Selenide browser version: " + Configuration.browserVersion);
+        return this;
     }
 
-    public void logBrowserBaseUrl(){
+    public TestSelenideConfigLogger logBrowserBaseUrl(){
         logger.info("Selenide base URL: " + Configuration.baseUrl);
+        return this;
     }
 
-    public void logBrowserRemote(){
+    public TestSelenideConfigLogger logBrowserRemote(){
         logger.info("Selenide remote: " + Configuration.remote);
+        return this;
     }
 
 }
