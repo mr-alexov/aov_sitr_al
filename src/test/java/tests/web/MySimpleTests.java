@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class MyDummyTests extends TestBaseWeb {
+public class MySimpleTests extends TestBaseWebMain {
 
     // Очень простые тесты, которые "почти ничего не делают"
 

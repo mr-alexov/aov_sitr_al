@@ -14,7 +14,7 @@ import java.util.Map;
 import static helpers.TestLoggerHelper.logAndPassSystemProperty;
 
 
-public class TestBaseWeb {
+public class TestBaseWebMain {
 
     @BeforeAll
     static void setUp() {
@@ -26,14 +26,12 @@ public class TestBaseWeb {
 
         // Configuration.holdBrowserOpen = true;
 
-
-
         // Пример обработки параметров
         // TODO: Перенести параметры в owner конфиг
 
         Configuration.browserSize = logAndPassSystemProperty("browserSize", "1920x1080");
 
-        Configuration.remote = logAndPassSystemProperty("remoteURL", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
+        Configuration.remote = logAndPassSystemProperty("remoteURL", null);
 
         // Конфигурация без указания в джобе:
         DesiredCapabilities capabilities = new DesiredCapabilities();
