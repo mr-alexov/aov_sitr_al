@@ -13,7 +13,7 @@ public class TestSelenideConfigLogger {
         return new TestSelenideConfigLogger();
     }
 
-    public void logSelenideMainConfigValues() {
+    public static void logSelenideMainConfigValues() {
         getTestSelenideConfigLogger()
                 .logBrowserName()
                 .logBrowserSize()
