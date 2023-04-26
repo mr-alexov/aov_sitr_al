@@ -2,7 +2,7 @@ package tests.api;
 
 import org.junit.jupiter.api.BeforeAll;
 
-public class TestBaseApi {
+public class TestBaseApiMain {
 
     //TODO: Добавить базовую конфигурацию для Rest Assured
 
