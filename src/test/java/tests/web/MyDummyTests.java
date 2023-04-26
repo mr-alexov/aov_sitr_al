@@ -28,7 +28,7 @@ public class MyDummyTests extends TestBaseWeb {
 
     @Tag("simple_tests")
     @Test
-    void theInternetHerokuTest() throws InterruptedException {
+    void theInternetHerokuTest() {
 
         open("https://the-internet.herokuapp.com/login");
 
