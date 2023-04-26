@@ -3,9 +3,9 @@ package tests.other;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import tests.web.TestBaseWeb;
+import tests.web.TestBaseWebMain;
 
-public class DummyEmptyWebConfTest extends TestBaseWeb {
+public class DummyMainWebConfTest extends TestBaseWebMain {
 
 
     @Tag("dry")
