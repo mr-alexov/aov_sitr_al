@@ -45,6 +45,7 @@ test {
 
 task autotest_dry_run(type: Test) {
 
+    // Setting system property for dry run test
     System.setProperty("dryRun","yes")
 
     systemProperties(System.getProperties())
@@ -60,12 +61,22 @@ task autotest_dry_run(type: Test) {
     useJUnitPlatform {
         includeTags("dry")
     }
-
 }
 
-task autotest_simple_tests(type: Test) {
+task autotest_simple_local(type: Test) {
+
+    systemProperties(System.getProperties())
     useJUnitPlatform {
         includeTags("simple_tests")
     }
+}
+
+task autotest_simple_remote(type: Test) {
+
+    System.setProperty("remoteURL", "https://user1:1234@selenoid.autotests.cloud/wd/hub")
+
     systemProperties(System.getProperties())
+    useJUnitPlatform {
+        includeTags("simple_tests")
+    }
 }
