@@ -4,9 +4,9 @@ import org.aeonbits.owner.Config;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
-        "system:properties",
-        "classpath:${env}.properties",
-        "classpath:default.properties"
+        "classpath:configs/${env}.properties",
+        "classpath:configs/default.properties",
+        "system:properties"
 })
 public interface DefaultWebConfig extends Config {
     @Key("browser")
@@ -25,4 +25,5 @@ public interface DefaultWebConfig extends Config {
 
     @Key("baseUrl")
     String getBaseUrl();
+
 }

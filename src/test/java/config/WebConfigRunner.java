@@ -1,7 +1,7 @@
 package config;
 
-public interface WebConfigRunner {
+public abstract class WebConfigRunner {
 
-    public void runWebConfig();
+    public abstract void runWebConfig();
 
 }

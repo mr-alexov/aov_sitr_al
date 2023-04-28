@@ -45,11 +45,47 @@ test {
 
 task autotest_dry_run(type: Test) {
 
+    useJUnitPlatform {
+        includeTags("dry")
+    }
+
     // Setting system property for dry run test
     System.setProperty("dryRun","yes")
 
     systemProperties(System.getProperties())
 
+    printSystemProperties()
+
+}
+
+task autotest_simple_local(type: Test) {
+
+    System.setProperty("env","local")
+
+    useJUnitPlatform {
+        includeTags("simple_tests")
+    }
+
+    systemProperties(System.getProperties())
+
+}
+
+task autotest_simple_remote(type: Test) {
+
+    useJUnitPlatform {
+        includeTags("simple_tests")
+    }
+
+    System.setProperty("env","remote")
+
+    System.setProperty("remoteURL", "https://user1:1234@selenoid.autotests.cloud/wd/hub")
+
+    systemProperties(System.getProperties())
+
+}
+
+
+def printSystemProperties() {
     // println(System.getProperties())
 
     println("Property dryRun: " + System.getProperty("dryRun"))
@@ -58,25 +94,4 @@ task autotest_dry_run(type: Test) {
     println("Property browser: " + System.getProperty("browser"))
     println("Property env: " + System.getProperty("env"))
 
-    useJUnitPlatform {
-        includeTags("dry")
-    }
-}
-
-task autotest_simple_local(type: Test) {
-
-    systemProperties(System.getProperties())
-    useJUnitPlatform {
-        includeTags("simple_tests")
-    }
-}
-
-task autotest_simple_remote(type: Test) {
-
-    System.setProperty("remoteURL", "https://user1:1234@selenoid.autotests.cloud/wd/hub")
-
-    systemProperties(System.getProperties())
-    useJUnitPlatform {
-        includeTags("simple_tests")
-    }
 }

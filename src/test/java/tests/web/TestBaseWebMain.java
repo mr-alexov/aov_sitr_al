@@ -2,6 +2,8 @@ package tests.web;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import config.HardcodedWebConfigRunner;
+import config.OwnerWebConfigRunner;
 import helpers.Attach;
 import helpers.TestLoggerHelper;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -21,27 +23,7 @@ public class TestBaseWebMain {
         // Простое добавление лисенера для аллюр отчета
         SelenideLogger.addListener("allure", new AllureSelenide());
 
-        // Улучшает загрузку страниц если какой-то ресурс проблемно тянется
-        Configuration.pageLoadStrategy = "eager";
-
-        // Configuration.holdBrowserOpen = true;
-
-        // Пример обработки параметров
-        // TODO: Перенести параметры в owner конфиг
-
-        Configuration.browserSize = logAndPassSystemProperty("browserSize", "1920x1080");
-
-        Configuration.remote = logAndPassSystemProperty("remoteURL", null);
-
-        // Конфигурация без указания в джобе:
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-                "enableVNC", true,
-                "enableVideo", true
-        ));
-        Configuration.browserCapabilities = capabilities;
-
-        TestLoggerHelper.logToLoggerAndToCustomLog("Set configuration.browserCapabilities: " + Configuration.browserCapabilities + "\n");
+        new OwnerWebConfigRunner().runWebConfig();
 
     }
 
