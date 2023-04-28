@@ -14,17 +14,16 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.util.Map;
 
 import static helpers.TestLoggerHelper.logAndPassSystemProperty;
+import static helpers.TestSelenideConfigLogger.logSelenideMainConfigValues;
 
 
 public class TestBaseWebMain {
 
     @BeforeAll
     static void setUp() {
-        // Простое добавление лисенера для аллюр отчета
         SelenideLogger.addListener("allure", new AllureSelenide());
-
         new OwnerWebConfigRunner().runWebConfig();
-
+        logSelenideMainConfigValues();
     }
 
     @AfterEach
