@@ -1,19 +1,13 @@
 package tests.web;
 
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import config.HardcodedWebConfigRunner;
 import config.OwnerWebConfigRunner;
 import helpers.Attach;
 import helpers.TestLoggerHelper;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
-import java.util.Map;
-
-import static helpers.TestLoggerHelper.logAndPassSystemProperty;
 import static helpers.TestSelenideConfigLogger.logSelenideMainConfigValues;
 
 
