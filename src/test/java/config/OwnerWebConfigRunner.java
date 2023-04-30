@@ -14,6 +14,7 @@ public class OwnerWebConfigRunner {
 
         // Configuration.holdBrowserOpen = true;
         Configuration.pageLoadStrategy = "eager";
+        Configuration.timeout = 7000;
 
         Configuration.browser = config.getBrowser();
         Configuration.browserVersion = config.getBrowserVersion();
