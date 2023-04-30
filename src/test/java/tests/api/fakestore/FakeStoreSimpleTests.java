@@ -1,17 +1,20 @@
 package tests.api.fakestore;
 
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
+import static tests.api.specs.GenApiSpec.genRequestSpec;
 
 public class FakeStoreSimpleTests {
 
     @Test
+    @Tag("simple_sampler")
+    @Tag("simple_api")
     void getProduct1() {
 
-        given()
-                .log().all()
+        given(genRequestSpec)
                 .when()
                 .get("https://fakestoreapi.com/products/1")
                 .then()
@@ -22,10 +25,11 @@ public class FakeStoreSimpleTests {
     }
 
     @Test
+    @Tag("simple_sampler")
+    @Tag("simple_api")
     void deleteProduct6() {
 
-        given()
-                .log().all()
+        given(genRequestSpec)
                 .when()
                 .delete("https://fakestoreapi.com/products/6")
                 .then()
