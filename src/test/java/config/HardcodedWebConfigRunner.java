@@ -7,6 +7,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.util.Map;
 import java.util.Objects;
 
+@SuppressWarnings("all")
 public class HardcodedWebConfigRunner {
 
     public void runWebConfig() {

@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Objects;
 
+@SuppressWarnings("all")
 public class TestLoggerHelper {
 
     static final Logger logger = LoggerFactory.getLogger(TestLoggerHelper.class);
