@@ -76,10 +76,34 @@ task autotest_simple_local(type: Test) {
 
 }
 
+task autotest_simple_api(type: Test) {
+
+    System.setProperty("env","local")
+
+    useJUnitPlatform {
+        includeTags("simple_api")
+    }
+
+    systemProperties(System.getProperties())
+
+}
+
+task autotest_simple_sampler(type: Test) {
+
+    System.setProperty("env","local")
+
+    useJUnitPlatform {
+        includeTags("simple_sampler")
+    }
+
+    systemProperties(System.getProperties())
+
+}
+
 task autotest_simple_remote(type: Test) {
 
     useJUnitPlatform {
-        includeTags("simple_tests")
+        includeTags("simple_sampler")
     }
 
     System.setProperty("env","remote")
