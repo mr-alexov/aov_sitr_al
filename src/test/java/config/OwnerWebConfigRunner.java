@@ -6,13 +6,10 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
 
-import static helpers.TestLoggerHelper.logAndPassSystemProperty;
-
-public class OwnerWebConfigRunner extends WebConfigRunner {
+public class OwnerWebConfigRunner {
 
     static DefaultWebConfig config = ConfigFactory.create(DefaultWebConfig.class, System.getProperties());
 
-    @Override
     public void runWebConfig() {
 
         // Configuration.holdBrowserOpen = true;

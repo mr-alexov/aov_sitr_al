@@ -7,9 +7,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.util.Map;
 import java.util.Objects;
 
-public class HardcodedWebConfigRunner extends WebConfigRunner{
+public class HardcodedWebConfigRunner {
 
-    @Override
     public void runWebConfig() {
         // Улучшает загрузку страниц если какой-то ресурс проблемно тянется
         Configuration.pageLoadStrategy = "eager";
@@ -24,8 +23,7 @@ public class HardcodedWebConfigRunner extends WebConfigRunner{
 
         Configuration.baseUrl = "https://demoqa.com/";
 
-        if (!Objects.isNull(Configuration.remote))
-        {
+        if (!Objects.isNull(Configuration.remote)) {
             // Конфигурация без указания в джобе:
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("selenoid:options", Map.<String, Object>of(

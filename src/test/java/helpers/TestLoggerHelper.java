@@ -16,7 +16,7 @@ public class TestLoggerHelper {
         myCustomLog.append(message).append("\n");
     }
 
-    public static String logAndPassSystemProperty(String parameter , String defaultValue) {
+    public static String logAndPassSystemProperty(String parameter, String defaultValue) {
         String value = System.getProperty(parameter);
         logToLoggerAndToCustomLog("System property " + parameter + ": " + value);
         String result = Objects.isNull(value) ? defaultValue : value;
@@ -24,7 +24,7 @@ public class TestLoggerHelper {
         return result;
     }
 
-    public static String logAndPassNamedString(String name , String parameter) {
+    public static String logAndPassNamedString(String name, String parameter) {
         logToLoggerAndToCustomLog("Passed " + name + ": " + parameter + "\n");
         return parameter;
     }

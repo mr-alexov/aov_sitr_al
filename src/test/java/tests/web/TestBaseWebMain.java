@@ -24,8 +24,7 @@ public class TestBaseWebMain {
     void addAttachments() {
         Attach.attachAsText("My custom log", TestLoggerHelper.getCustomLogs());
 
-        // Проверка на специальную задачу dryRun -- которая для скорости не будет гонять никаких тестов
-        // TODO: Проверить можно ли это убрать с новой обработкой исключений которая будет гасить проблемы аллюр отчета
+        // TODO: Доделать чтобы не сыпалось исключений с dryRun независимо от вариантов запуска.
 
         if (!"yes".equals(System.getProperty("dryRun"))) {
             Attach.screenshotAs("Last screen");
