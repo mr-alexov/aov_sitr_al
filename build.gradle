@@ -114,6 +114,31 @@ task autotest_simple_remote(type: Test) {
 
 }
 
+task autotest_bell_local(type: Test) {
+
+    System.setProperty("env","local")
+
+    useJUnitPlatform {
+        includeTags("bell")
+    }
+
+    systemProperties(System.getProperties())
+
+}
+
+task autotest_bell_remote(type: Test) {
+
+    useJUnitPlatform {
+        includeTags("bell")
+    }
+
+    System.setProperty("env","remote")
+
+    System.setProperty("remoteURL", "https://user1:1234@selenoid.autotests.cloud/wd/hub")
+
+    systemProperties(System.getProperties())
+
+}
 
 def printSystemProperties() {
     // println(System.getProperties())
