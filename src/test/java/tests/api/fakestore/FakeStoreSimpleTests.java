@@ -1,5 +1,8 @@
 package tests.api.fakestore;
 
+import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.selenide.AllureSelenide;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -8,6 +11,11 @@ import static org.hamcrest.Matchers.is;
 import static tests.api.specs.GenApiSpec.genRequestSpec;
 
 public class FakeStoreSimpleTests {
+
+    @BeforeAll
+    static void beforeAll() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
+    }
 
     @Test
     @Tag("simple_sampler")
