@@ -31,7 +31,7 @@ public class BellIntTests extends TestBaseWebMain {
     @ParameterizedTest
     @Tag("simple_sampler")
     @Tag("bell")
-    @ValueSource(strings = {"акция", "новая", "услуг", "проверки", "условия"})
+    @ValueSource(strings = {"акция", "новая", "услуг", "проверки", "условия", "команде", "тестирования", "клиентский", "опыт", "система"})
     void bellSearchTest(String value) {
 
         open("https://bellintegrator.ru/");
