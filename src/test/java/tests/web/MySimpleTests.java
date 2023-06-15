@@ -15,7 +15,8 @@ public class MySimpleTests extends TestBaseWebMain {
 
     // Очень простые тесты, которые "почти ничего не делают"
 
-    @Tag("simple_tests")
+    @Tag("simple_sampler")
+    @Tag("simple_web")
     @Test
     void dummyDuckDuckGoSearch() {
         open("https://duckduckgo.com/");
@@ -26,7 +27,8 @@ public class MySimpleTests extends TestBaseWebMain {
 
     }
 
-    @Tag("simple_tests")
+    @Tag("simple_sampler")
+    @Tag("simple_web")
     @Test
     void theInternetHerokuTest() {
 
