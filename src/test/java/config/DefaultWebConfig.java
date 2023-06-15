@@ -5,7 +5,6 @@ import org.aeonbits.owner.Config;
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
         "classpath:configs/${env}.properties",
-        "classpath:configs/default.properties",
         "system:properties"
 })
 public interface DefaultWebConfig extends Config {
