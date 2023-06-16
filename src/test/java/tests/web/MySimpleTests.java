@@ -22,7 +22,7 @@ public class MySimpleTests extends TestBaseWebMain {
         open("https://duckduckgo.com/");
         $("[id=search_form_input_homepage]").setValue("selenide").pressEnter();
 
-        SelenideElement links = $("[id=links]");
+        SelenideElement links = $("ol.react-results--main");
         links.shouldHave(text("https://selenide.org"));
 
     }
