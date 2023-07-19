@@ -20,7 +20,7 @@ public class HardcodedWebConfigRunner {
         Configuration.browserSize = "1920x1080";
 
         // Change to true if you need remote execution
-        Configuration.remote = false ? "https://user1:1234@selenoid.autotests.cloud/wd/hub" : null;
+        Configuration.remote = System.getProperty("remoteURL");
 
         Configuration.baseUrl = "https://demoqa.com/";
 
