@@ -114,6 +114,13 @@ task autotest_simple_remote(type: Test) {
 
 }
 
+task print_system_properties(type: Test) {
+
+    println(System.getProperties())
+
+}
+
+
 def printSystemProperties() {
     // println(System.getProperties())
 
