@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import java.time.Duration;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -18,13 +19,12 @@ public class MySimpleTests extends TestBaseWebMain {
     @Tag("simple_sampler")
     @Tag("simple_web")
     @Test
-    void dummyDuckDuckGoSearch() {
-        open("https://duckduckgo.com/");
-        $("[id=search_form_input_homepage]").setValue("selenide").pressEnter();
-
-        SelenideElement links = $("ol.react-results--main");
-        links.shouldHave(text("https://selenide.org"));
-
+    void magentoSTBsearchTest() {
+        open("https://magento.softwaretestingboard.com/");
+        $("#search").sendKeys("pants");
+        $("#search").pressEnter();
+        $(".product-item-link").shouldBe(visible);
+        $(".product-item-link").shouldHave(text("Pant"));
     }
 
     @Tag("simple_sampler")
