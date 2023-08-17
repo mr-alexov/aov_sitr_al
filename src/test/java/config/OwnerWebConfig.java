@@ -7,7 +7,7 @@ import org.aeonbits.owner.Config;
         "classpath:configs/${env}.properties",
         "system:properties"
 })
-public interface DefaultWebConfig extends Config {
+public interface OwnerWebConfig extends Config {
     @Key("browser")
     @DefaultValue("chrome")
     String getBrowser();

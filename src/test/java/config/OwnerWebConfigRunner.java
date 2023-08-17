@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class OwnerWebConfigRunner {
 
-    static DefaultWebConfig config = ConfigFactory.create(DefaultWebConfig.class, System.getProperties());
+    static OwnerWebConfig config = ConfigFactory.create(OwnerWebConfig.class, System.getProperties());
 
     public void runWebConfig() {
 
