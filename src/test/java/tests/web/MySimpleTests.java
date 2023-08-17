@@ -24,7 +24,7 @@ public class MySimpleTests extends TestBaseWebMain {
         $("#search").sendKeys("pants");
         $("#search").pressEnter();
         $(".product-item-link").shouldBe(visible);
-        $(".product-item-link").shouldHave(text("Pont"));
+        $(".product-item-link").shouldHave(text("Pant"));
     }
 
     @Tag("simple_sampler")
@@ -36,7 +36,7 @@ public class MySimpleTests extends TestBaseWebMain {
 
         $("#username").shouldBe(Condition.interactable, Duration.ofSeconds(20));
         $("#username").setValue("tomsmith");
-        $("#password").setValue("SuperSecretPassword!");
+        $("#password").setValue("SperSecretPassword!");
         $("button.radius").click();
 
         $("div.flash").shouldHave(text("You logged into a secure area!"));
