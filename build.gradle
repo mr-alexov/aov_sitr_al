@@ -35,10 +35,11 @@ dependencies {
             "io.qameta.allure:allure-selenide:$allureVersion",
             "org.assertj:assertj-core:3.24.2",
             "com.fasterxml.jackson.core:jackson-databind:2.14.2",
+            "com.github.javafaker:javafaker:1.0.2",
             "org.junit.jupiter:junit-jupiter:5.9.2",
             "org.aeonbits.owner:owner:1.0.12",
             "io.rest-assured:rest-assured:$restAssuredVersion",
-            "com.codeborne:selenide:6.13.0",
+            "com.codeborne:selenide:6.16.1",
             "org.slf4j:slf4j-api:$slf4jVersion",
             "org.slf4j:slf4j-simple:$slf4jVersion"
     )
@@ -49,75 +50,42 @@ test {
     systemProperties(System.getProperties())
 }
 
+// Deprecated task needed for debugging system properties, to be reconsidered
 task autotest_dry_run(type: Test) {
-
     useJUnitPlatform {
         includeTags("dry")
     }
-
     // Setting system property for dry run test
     System.setProperty("dryRun","yes")
-
     systemProperties(System.getProperties())
-
     printSystemProperties()
-
 }
 
 task autotest_simple_web(type: Test) {
-
-    System.setProperty("env","local")
-
     useJUnitPlatform {
         includeTags("simple_web")
     }
-
     systemProperties(System.getProperties())
-
 }
 
 task autotest_simple_api(type: Test) {
-
-    System.setProperty("env","local")
-
     useJUnitPlatform {
         includeTags("simple_api")
     }
-
     systemProperties(System.getProperties())
-
 }
 
 task autotest_simple_sampler(type: Test) {
-
-    System.setProperty("env","local")
-
     useJUnitPlatform {
         includeTags("simple_sampler")
     }
-
     systemProperties(System.getProperties())
-
 }
 
-task autotest_simple_remote(type: Test) {
 
-    useJUnitPlatform {
-        includeTags("simple_sampler")
-    }
-
-    System.setProperty("env","remote")
-
-    System.setProperty("remoteURL", "https://user1:1234@selenoid.autotests.cloud/wd/hub")
-
-    systemProperties(System.getProperties())
-
-}
-
+// This task just prints ALL system properties -- for encoding investigation
 task print_system_properties(type: Test) {
-
     println(System.getProperties())
-
 }
 
 
