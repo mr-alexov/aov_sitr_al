@@ -24,7 +24,7 @@ public class MySimpleTests extends TestBaseWebMain {
         $("#search").sendKeys("pants");
         $("#search").pressEnter();
         $(".product-item-link").shouldBe(visible);
-        $(".product-item-link").shouldHave(text("Pant"));
+        $(".product-item-link").shouldHave(text("Pont"));
     }
 
     @Tag("simple_sampler")
