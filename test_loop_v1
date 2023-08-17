@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 for (( i=1; i<=3; i++ ))
 do
    ./gradlew :test --tests "tests.web.MySimpleTests.theInternetHerokuTest" --rerun -Denv=remote
