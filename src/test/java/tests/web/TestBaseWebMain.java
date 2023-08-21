@@ -25,7 +25,7 @@ public class TestBaseWebMain {
     }
 
     protected void logException(Exception e) {
-        logger.info(e.getMessage());
+        System.out.println(e.getMessage());
         e.printStackTrace();
     }
 
