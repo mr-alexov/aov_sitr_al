@@ -2,6 +2,7 @@ package tests.web;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -18,7 +19,7 @@ public class MySimpleTests extends TestBaseWebMain {
 
     @Tag("simple_sampler")
     @Tag("simple_web")
-    @Test
+    @RepeatedTest(value = 10, name = RepeatedTest.LONG_DISPLAY_NAME)
     void magentoSTBsearchTest() {
         open("https://magento.softwaretestingboard.com/");
         $("#search").sendKeys("pants");
