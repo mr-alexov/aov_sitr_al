@@ -37,7 +37,7 @@ public class MySimpleTests extends TestBaseWebMain {
 
         $("#username").shouldBe(Condition.interactable, Duration.ofSeconds(20));
         $("#username").setValue("tomsmith");
-        $("#password").setValue("SperSecretPassword!");
+        $("#password").setValue("SuperSecretPassword!");
         $("button.radius").click();
 
         $("div.flash").shouldHave(text("You logged into a secure area!"));
