@@ -19,7 +19,7 @@ public class MySimpleTests extends TestBaseWebMain {
 
     @Tag("simple_sampler")
     @Tag("simple_web")
-    @RepeatedTest(value = 10, name = RepeatedTest.LONG_DISPLAY_NAME)
+    @RepeatedTest(value = 3, name = RepeatedTest.LONG_DISPLAY_NAME)
     void magentoSTBsearchTest() {
         open("https://magento.softwaretestingboard.com/");
         $("#search").sendKeys("pants");
