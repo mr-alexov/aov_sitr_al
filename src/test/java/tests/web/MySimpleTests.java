@@ -30,7 +30,7 @@ public class MySimpleTests extends TestBaseWebMain {
 
     @Tag("simple_sampler")
     @Tag("simple_web")
-    @Test
+    @RepeatedTest(value = 2, name = RepeatedTest.LONG_DISPLAY_NAME)
     void theInternetHerokuTest() {
 
         open("https://the-internet.herokuapp.com/login");
