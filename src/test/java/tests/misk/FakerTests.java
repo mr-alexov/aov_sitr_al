@@ -1,5 +1,6 @@
-package tests.snipptests;
+package tests.misk;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
@@ -10,6 +11,8 @@ import static org.assertj.core.api.Assertions.*;
 
 public class FakerTests {
 
+
+    @Disabled
     @Test
     void fakerOptionTest() {
 

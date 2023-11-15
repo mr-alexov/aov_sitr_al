@@ -6,11 +6,11 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.time.Duration;
+import java.util.List;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 public class MySimpleTests extends TestBaseWebMain {
 
@@ -36,6 +36,7 @@ public class MySimpleTests extends TestBaseWebMain {
 
         $("#username").shouldBe(Condition.interactable, Duration.ofSeconds(20));
         $("#username").setValue("tomsmith");
+
         $("#password").setValue("SuperSecretPassword!");
         $("button.radius").click();
 

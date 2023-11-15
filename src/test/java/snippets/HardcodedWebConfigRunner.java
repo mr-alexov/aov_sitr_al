@@ -2,7 +2,7 @@
     Данный файл является примером конфига старого стиля в котором параметры задаются хардкодом.
     Работать с таким конфигом не обязательно.
 */
-package snippets.older;
+package snippets;
 
 import com.codeborne.selenide.Configuration;
 import helpers.TestLoggerHelper;
