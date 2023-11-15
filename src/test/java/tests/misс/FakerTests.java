@@ -1,4 +1,4 @@
-package tests.misk;
+package tests.misс;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
