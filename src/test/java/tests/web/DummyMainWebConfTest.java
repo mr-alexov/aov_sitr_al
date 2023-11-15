@@ -8,7 +8,7 @@ import static helpers.TestSelenideConfigLogger.logSelenideMainConfigValues;
 
 public class DummyMainWebConfTest extends TestBaseWebMain {
 
-
+    // Отладочный псевдотест, который только выводит в консоль конфигурацию c которой был запущен
     @Test
     @Tag("dry")
     void emptyTest() {
