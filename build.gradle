@@ -39,7 +39,7 @@ dependencies {
             "org.junit.jupiter:junit-jupiter:5.9.2",
             "org.aeonbits.owner:owner:1.0.12",
             "io.rest-assured:rest-assured:$restAssuredVersion",
-            "com.codeborne:selenide:6.16.1",
+            "com.codeborne:selenide:6.19.1",
             "org.slf4j:slf4j-api:$slf4jVersion",
             "org.slf4j:slf4j-simple:$slf4jVersion"
     )
