@@ -47,9 +47,9 @@ public class MySimpleTests extends TestBaseWebMain {
     @Tag("simple_sampler")
     @Tag("simple_web")
     @Test
-    void mirKvestov() {
-        open("https://mir-kvestov.ru");
-        $(".home__h1").shouldHave(text("Мир Квестов"));
+    void proCharity() {
+        open("http://procharity.ru/");
+        $("div.top__headline").shouldHave(text("ProCharity"));
     }
 
 
