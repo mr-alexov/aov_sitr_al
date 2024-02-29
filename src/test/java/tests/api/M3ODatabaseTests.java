@@ -21,8 +21,6 @@ public class M3ODatabaseTests {
 
 
     @Test
-    @Tag("simple_sampler")
-    @Tag("simple_api")
     void getTables() {
 
         ValidatableResponse response =
