@@ -1,4 +1,4 @@
-package tests.misс;
+package tests.libs;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.HashSet;
 import java.util.Set;
 
-import static snippets.FakerTests.getRandom;
+import static snippets.FakerSnippets.getRandom;
 import static org.assertj.core.api.Assertions.*;
 
 public class FakerTests {
