@@ -1,4 +1,4 @@
-package tests.samples;
+package tests.web.probes;
 
 import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.Disabled;
