@@ -5,17 +5,20 @@ import io.qameta.allure.selenide.AllureSelenide;
 import io.restassured.http.ContentType;
 import io.restassured.response.ValidatableResponse;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 
+@Disabled("The service does not seem to work at present")
 public class M3ODatabaseTests {
 
     @BeforeAll
     static void beforeAll() {
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
+
 
     @Test
     @Tag("simple_sampler")
