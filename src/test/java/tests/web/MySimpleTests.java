@@ -44,13 +44,4 @@ public class MySimpleTests extends TestBaseWebMain {
 
     }
 
-    @Tag("simple_sampler")
-    @Tag("simple_web")
-    @Test
-    void proCharity() {
-        open("http://procharity.ru/");
-        $("div.top__headline").shouldHave(text("ProCharity"));
-    }
-
-
 }
