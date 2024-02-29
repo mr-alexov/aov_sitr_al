@@ -1,4 +1,4 @@
-package tests.api.fakestore;
+package tests.api;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
-import static tests.api.specs.GenApiSpec.genRequestSpec;
+import static specs.GenApiSpec.genRequestSpec;
 
 public class FakeStoreSimpleTests {
 
